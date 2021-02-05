@@ -16,23 +16,23 @@ $msgv = "<h1>Teste de Email</h1>";
 $mail->IsSMTP(); // Define que a mensagem será SMTP
  
 try {
-     $mail->Host = 'smtplw.com.br'; // Endereço do servidor SMTP (Autenticação, utilize o host smtp.seudomínio.com.br)
+     $mail->Host = 'xxx.com.br'; // Endereço do servidor SMTP (Autenticação, utilize o host smtp.seudomínio.com.br)
      $mail->SMTPAuth   = true;  // Usar autenticação SMTP (obrigatório para smtp.seudomínio.com.br)
      $mail->Port       = 587; //  Usar 587 porta SMTP
-     $mail->Username = 'deltasystems'; // Usuário do servidor SMTP (endereço de email)
-     $mail->Password = 'EKWyHtmn1786'; // Senha do servidor SMTP (senha do email usado)
+     $mail->Username = 'xxx'; // Usuário do servidor SMTP (endereço de email)
+     $mail->Password = 'xxx'; // Senha do servidor SMTP (senha do email usado)
  
      //Define o remetente
      // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=    
-     $mail->SetFrom('deltafin@deltasystems.com.br'); //Seu e-mail
-     //$mail->AddReplyTo('flavio@deltasystems.com.br', 'AddReplyTo - Flávio '); //Seu e-mail
+     $mail->SetFrom('xx@xxx.com.br'); //Seu e-mail
+     //$mail->AddReplyTo('x@xxx.com.br', 'AddReplyTo - Flávio '); //Seu e-mail
      $mail->Subject = $titulov; //Assunto do e-mail
  
  
      //Define os destinatário(s)
      //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-     // $mail->AddAddress('flavio@deltasystems.com.br', 'Teste email');
-	 $mail->AddAddress('suporte@deltasystems.com.br', 'Teste email');
+     // $mail->AddAddress('x@xxx.com.br', 'Teste email');
+	 $mail->AddAddress('x@xxxx.com.br', 'Teste email');
  
      //Campos abaixo são opcionais 
      //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
