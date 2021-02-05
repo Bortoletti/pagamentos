@@ -1,2 +1,0 @@
-# pagamentos
-Pagamentos em Boleto
