@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>O2 Pagamentos - Perfil</title>
+    <meta name="description" content="Aplicação destinada a automação de cobrança.">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script><!--vue-->
+</head>
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary navbar-color p-0">
+            <div class="container-fluid d-flex flex-column p-0">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="main2.html">
+                    <div class="sidebar-brand-icon"><img src="assets/img/backgrounds/icon.png"></i></div>
+                    <div class="sidebar-brand-text mx-3"><img src="assets/img/backgrounds/logo4.png"></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="nav navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="main2.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="debtors.html"><i class="fas fa-table"></i><span>Devedores</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="settled.html"><i class="fa fa-check-square-o"></i></i><span>Liquidados</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="wallet.html"><i class="fa fa-database"></i><span>Carteira</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="charging.html"><i class="fa fa-barcode"></i><span>Cobrança</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="users.html"><i class="fa fa-users"></i><span>Usuários</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="accreditation.html"><i class="fa fa-address-card-o"></i><span>Cadastro/Vendedor</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid">
+                        <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>                        
+                        <h4 class="text-gray-600 mb-4 space-top"><i class="fa fa-user"></i> Perfil</h4>
+                        <ul class="nav navbar-nav flex-nowrap ml-auto">
+
+                            <!--
+                            <li class="nav-item dropdown no-arrow mx-1" role="presentation">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="badge badge-danger badge-counter">3+</span><i class="fas fa-bell fa-fw"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-list dropdown-menu-right animated--grow-in"
+                                        role="menu">
+                                        <h6 class="dropdown-header dropdown-header-green">Notificações</h6>
+                                        <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="mr-3">
+                                                <div class="bg-primary icon-circle"><i class="fas fa-file-alt text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">12 de dezembro de 2019</span>
+                                                <p>Um novo relatório mensal está pronto para download!</p>
+                                            </div>
+                                        </a>
+                                        <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="mr-3">
+                                                <div class="bg-success icon-circle"><i class="fas fa-donate text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">7 de dezembro de 2019</span>
+                                                <p>R$290,29 foram depositados em sua conta!</p>
+                                            </div>
+                                        </a>
+                                        <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="mr-3">
+                                                <div class="bg-warning icon-circle"><i class="fas fa-exclamation-triangle text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">2 de dezembro de 2019</span>
+                                                <p>Alerta de gasto: observamos gastos extraordinariamente altos para sua conta.</p>
+                                            </div>
+                                        </a><a class="text-center dropdown-item small text-gray-500" href="#">Mostrar todas as notificações</a></div>
+                                </div>
+                            </li> -->
+
+                            <!--
+                            <li class="nav-item dropdown no-arrow mx-1" role="presentation">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fas fa-envelope fa-fw"></i><span class="badge badge-danger badge-counter">7</span></a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-list dropdown-menu-right animated--grow-in"
+                                        role="menu">
+                                        <h6 class="dropdown-header dropdown-header-green">Caixa de Entrada</h6>
+                                        <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="assets/img/avatars/avatar4.jpeg">
+                                                <div class="bg-success status-indicator"></div>
+                                            </div>
+                                            <div class="font-weight-bold">
+                                                <div class="text-truncate"><span>Olá! Gostaria de saber se você pode me ajudar com um problema que tenho tido.</span></div>
+                                                <p class="small text-gray-500 mb-0">Emily Fowler - 58m</p>
+                                            </div>
+                                        </a>
+                                        <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="assets/img/avatars/avatar2.jpeg">
+                                                <div class="status-indicator"></div>
+                                            </div>
+                                            <div class="font-weight-bold">
+                                                <div class="text-truncate"><span>Eu tenho as fotos que você pediu no mês passado!</span></div>
+                                                <p class="small text-gray-500 mb-0">Jae Chun - 1d</p>
+                                            </div>
+                                        </a>
+                                        <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="assets/img/avatars/avatar3.jpeg">
+                                                <div class="bg-warning status-indicator"></div>
+                                            </div>
+                                            <div class="font-weight-bold">
+                                                <div class="text-truncate"><span>O relatório do mês passado está ótimo, estou muito feliz com o progresso até agora, continue com o bom trabalho!</span></div>
+                                                <p class="small text-gray-500 mb-0">Morgan Alvarez - 2d</p>
+                                            </div>
+                                        </a>
+                                        <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="assets/img/avatars/avatar5.jpeg">
+                                                <div class="bg-success status-indicator"></div>
+                                            </div>
+                                            <div class="font-weight-bold">
+                                                <div class="text-truncate"><span>Eu sou um bom garoto? A razão pela qual pergunto é porque alguém me disse que as pessoas dizem isso para todos os cães, mesmo que não sejam bons ...</span></div>
+                                                <p class="small text-gray-500 mb-0">Frango o cachorro - 2w</p>
+                                            </div>
+                                        </a><a class="text-center dropdown-item small text-gray-500" href="#">Mostrar todas as mensagens</a></div>
+                                </div>
+                                <div class="shadow dropdown-list dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown"></div>
+                            </li> -->
+
+                            <!--
+                            <div class="d-none d-sm-block topbar-divider"></div> -->
+                            
+                            <div id='userName'>
+                                <li class="nav-item dropdown no-arrow" role="presentation">
+                                    <div class="nav-item dropdown no-arrow">
+                                        <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">
+                                            <span class="d-none d-lg-inline mr-2 text-gray-600 small">{{ nome }}</span>
+                                            <img class="border rounded-circle img-profile" src="assets/img/avatars/default_avatar.png">
+                                        </a>
+                                        <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in" role="menu">
+                                            
+                                            <a class="dropdown-item active" role="presentation" href="profile2.html">
+                                                <i class="fa fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Perfil
+                                            </a> 
+
+                                            <div class="dropdown-divider"></div>
+
+                                            <a class="dropdown-item" role="presentation" href="index.html">
+                                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Sair
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div><!--userName-->
+                        </ul>
+            </div>
+            </nav>
+            <div class="container-fluid"> 
+                <div id="appUserConfig"> 
+                    <button @click='exibir' style="color:white;" class="btn btn-sucess btn2-color space" type="button">
+                        <i class="fa fa-floppy-o fa-sm text-white-50"></i> Salvar
+                    </button>           
+                    <div class="card shadow space">
+                        <div class="card-header py-3">
+                            <p class="text-primary m-0 font-weight-bold">Configurações do usuário</p>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label for="first_name"><strong>Nome</strong></label>
+                                            <input v-model="nomeUser" class="form-control" type="text">
+                                        </div><!--nome-->
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label for="last_name"><strong>Sobrenome</strong></label>
+                                            <input class="form-control" type="text">
+                                        </div><!--sobrenome-->
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="last_name"><strong>CPF</strong></label>
+                                            <input class="form-control" type="text">
+                                        </div><!--CPF-->
+                                    </div>
+                                </div><!--form-row-->
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="email"><strong>Endereço de Email</strong></label>
+                                            <input class="form-control" type="email" placeholder="user@example.com" name="email">
+                                        </div>
+                                    </div><!--email-->
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="email"><strong>Senha</strong></label>
+                                            <input class="form-control" type="email" placeholder="Defina uma nova senha" name="email">
+                                        </div>
+                                    </div><!--senha-->
+                                </div><!--form-row-->
+                            </form><!--form-->
+                        </div><!--card-body-->
+                    </div><!--card-shadow-->
+                    <div class="card shadow">
+                        <div class="card-header py-3">
+                            <p class="text-primary m-0 font-weight-bold">Configurações de contato</p>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label for="address"><strong>Endereço</strong></label>
+                                            <input class="form-control" type="text">
+                                        </div><!--endereço-->
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="address"><strong>Número</strong></label>
+                                            <input class="form-control" type="text">
+                                        </div><!--número-->
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="address"><strong>Complemento</strong></label>
+                                            <input class="form-control" type="text">
+                                        </div><!--complemento-->
+                                    </div>
+                                </div><!--form-row-->
+                                <div class="form-row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="city"><strong>País</strong></label>
+                                            <input class="form-control" type="text">
+                                        </div><!--País-->
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="city"><strong>UF</strong></label>
+                                            <input class="form-control" type="text">
+                                        </div><!--UF-->
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="city"><strong>Cidade</strong></label>
+                                            <input class="form-control" type="text">
+                                        </div><!--Cidade-->
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="city"><strong>CEP</strong></label>
+                                            <input class="form-control" type="text">
+                                        </div><!--CEP-->
+                                    </div>
+                                </div><!--form-row-->
+                            </form><!--form-->
+                        </div><!--card-body-->
+                    </div><!--card-shadow-->
+                </div><!--appUserConfig-->  
+            </div><!--container-fluid-->
+        </div>
+        <footer class="bg-white sticky-footer">
+            <div class="container my-auto">
+                <div class="text-center my-auto copyright"><span>Copyright © O2 Pagamentos 2020</span></div>
+            </div>
+        </footer>
+    </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script><!--axios-->
+    <script>
+        var userName = new Vue({
+          el: '#userName'
+          , data:{
+            nome : ''
+          }
+          , mounted(){
+            this.nome = sessionStorage.nomeUsuario
+          }
+        })
+        var appUserConfig = new Vue({
+            el: '#appUserConfig',
+            data: {
+                itens:[],
+                nomeUser: ''
+            }, 
+            methods: {
+                exibir() {
+                    alert( this.nomeUser )
+                }
+            }
+        })
+    </script><!--vue app-->    
+</body>
+</html>

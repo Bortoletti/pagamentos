@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>O2 Pagamentos - Registro</title>
+    <meta name="description" content="Aplicação destinada a automação de cobrança.">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script><!--vue-->
+</head>
+
+<body class="bg-gradient-primary bg-color">
+    <div id='app'>
+        <div class="container">
+            <div class="card shadow-lg o-hidden border-0 my-5">
+                <div class="card-body p-0">
+                    <div class="row">
+                        <div class="col-lg-5 d-none d-lg-flex">
+                            <div class="flex-grow-1 bg-register-image" style="background-image: url(&quot;assets/img/backgrounds/bg4.jpg&quot;);"></div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <div class="logo"><img src="assets/img/backgrounds/logo.png"></div>
+                                    <h4 class="text-dark mb-4">Crie sua conta aqui!</h4>
+                                </div>
+                                <form class="user" v-on:submit.prevent="checkForm">
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input v-model="nome" class="form-control form-control-user" type="text" id="exampleFirstName" placeholder="Nome" name="first_name">
+                                            <span style="width: 100%;margin-top: .25rem;color: #e74a3b;font-size: 80%;" v-if="msg.nome">{{ msg.nome }}</span>
+                                        </div><!--nome-->
+                                        <div class="col-sm-6">
+                                            <input v-model="sobrenome" class="form-control form-control-user" type="text" id="exampleFirstName" placeholder="Sobrenome" name="last_name">
+                                            <span style="width: 100%;margin-top: .25rem;color: #e74a3b;font-size: 80%;" v-if="msg.sobrenome">{{ msg.sobrenome }}</span>
+                                        </div><!--sobrenome-->
+                                    </div>
+                                    <div class="form-group">
+                                        <input v-model="email" class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email" name="email">
+                                        <span style="width: 100%;margin-top: .25rem;color: #e74a3b;font-size: 80%;" v-if="msg.email">{{ msg.email }}</span>
+                                    </div><!--email-->
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input v-model="senha" class="form-control form-control-user" type="password" id="examplePasswordInput" placeholder="Senha" name="password">
+                                            <span style="width: 100%;margin-top: .25rem;color: #e74a3b;font-size: 80%;" v-if="msg.senha">{{ msg.senha }}</span>
+                                        </div><!--senha-->
+                                        <div class="col-sm-6">
+                                            <input v-model="resenha" class="form-control form-control-user" type="password" id="exampleRepeatPasswordInput" placeholder="Repita a senha" name="password_repeat">
+                                            <span style="width: 100%;margin-top: .25rem;color: #e74a3b;font-size: 80%;" v-if="msg.resenha">{{ msg.resenha }}</span>
+                                        </div><!--resenha-->
+                                    </div>
+                                    <button @click='checkForm' class="btn btn-success btn-block text-white btn-user btn2-color" type="button">Registrar conta</button>
+                                    
+                                    <!--
+                                    <hr><a class="btn btn-primary btn-block text-white btn-google btn-user" role="button"><i class="fab fa-google"></i>&nbsp; Registre-se com Google</a>
+                                    <a class="btn btn-primary btn-block text-white btn-facebook btn-user" role="button"><i class="fab fa-facebook-f"></i>&nbsp; Registre-se com Facebook</a>
+                                    -->
+
+                                    <hr>
+                                </form><!--form-->
+                                <div class="text-center"><a class="small" href="forgot-password.html">Esqueceu a senha?</a></div>
+                                <div class="text-center"><a class="small" href="index.html">Já tem uma conta? Acesse aqui!</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--app-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script><!--axios-->
+    <script>
+        var app = new Vue({
+          el: '#app'
+          , data: {
+              nome: ''
+            , sobrenome: ''
+            , email : ''
+            , senha : ''
+            , resenha: ''
+            , msg: []
+          } // data
+          , methods: {
+                checkForm() {
+                    this.msg = [];
+                    this.msg.push('Error');
+                    // Verificação
+                    if(!this.nome){
+                        this.msg['nome'] = "O campo Nome deve ser preenchido.";
+                    }else{
+                        this.msg['nome'] = '';
+                    }
+
+                    if(!this.sobrenome){
+                        this.msg['sobrenome'] = "O campo Sobrenome deve ser preenchido.";
+                    }else{
+                        this.msg['sobrenome'] = '';
+                    }
+
+                    if(!this.email){
+                        this.msg['email'] = "O campo Email deve ser preenchido.";
+                    }else{
+                        this.msg['email'] = '';
+                    }
+
+                    if(!this.senha){
+                        this.msg['senha'] = 'O campo Senha deve ser preenchido.';
+                    } else{
+                        this.msg['senha'] = '';
+                    }
+
+                    if(!this.resenha){
+                        this.msg['resenha'] = 'O campo Re-senha deve ser preenchido.';
+                    } else if(this.resenha != this.senha){
+                        this.msg['resenha'] = 'Os campos estão com senhas distintas.';
+                    } else{
+                        this.msg['resenha'] = '';
+                    }
+
+                    if(this.nome && this.sobrenome && this.email && this.senha && this.resenha){
+                        /* 
+                        var obj = { 
+                              "id_usuario":0
+                            , "id_empresa": sessionStorage.idEmpresa
+                            , "nome": this.nome
+                            , "sobrenome": this.sobrenome
+                            , "email": this.login
+                            , "senha": this.senha
+                            , "resenha": this.resenha
+                            , "fl_ativo":'S'
+                        }
+                        var urlv = './json/usuarioAdd.php';
+                        $.post( urlv , obj, function( data ){
+                            console.log(data);
+                            alert("Um email de confirmação será enviado para o email informado!");
+                            document.location.reload(true);
+                        }); */
+                    } // enviar cadastro de usuário
+                } // function: checkForm            
+            } // methods
+        })
+    </script><!--vue app-->
+</body>
+
+</html>
