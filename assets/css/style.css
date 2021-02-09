@@ -1,0 +1,83 @@
+.bg-color{
+	background: #0f9d58;
+}
+
+.btn-color{
+	background: #4e5b1c;
+	border: 1px solid #4e5b1c;
+}
+
+.btn-color:hover{
+	background: #404b17;
+	border: 1px solid #404b17;
+}
+
+.btn2-color{
+	background: #0f9d58;
+	border: 1px solid #0f9d58;
+}
+
+.btn2-color:hover{
+	background: #0e7643;
+	border: 1px solid #0e7643;
+}
+
+.btn3-color{
+	background: #dc143c;
+	border: 1px solid #dc143c;
+}
+
+.btn3-color:hover{
+	background: #b01030;
+	border: 1px solid #b01030;
+}
+
+.logo{
+	margin: 20px;
+}
+
+.navbar-color{
+	background: #0f9d58;
+}
+
+.dropdown-header-green{
+	background-color: #0f9d58!important;
+	border: 1px solid #0f9d58!important;
+}
+
+.active-gray{
+	color: #808080;
+	font-weight: bold;
+}
+
+.space{
+	margin-bottom: 20px;
+}
+
+.space-top{
+	margin-top: 20px;
+}
+
+#ui-datepicker-div{
+	z-index: 1050!important;
+	font-family: sans-serif;
+}
+
+.ui-autocomplete{
+	z-index: 1050!important;
+}
+
+.fat-cliente{
+    color: #4e73df;
+    cursor: pointer;
+}
+
+.btnJaime{
+	background: #e77c14;
+	border: 1px solid #e77c14;
+}
+
+.btnJaime:hover{
+	background: #ad5e0e;
+	border: 1px solid #ad5e0e;
+}
