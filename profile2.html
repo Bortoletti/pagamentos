@@ -6,9 +6,9 @@
     <title>O2 Pagamentos - Perfil</title>
     <meta name="description" content="Aplicação destinada a automação de cobrança.">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css"><!--CSS faltando-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css"><!--fontes faltando-->
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script><!--vue-->
@@ -147,120 +147,137 @@
                                 </li>
                             </div><!--userName-->
                         </ul>
-            </div>
-            </nav>
-            <div class="container-fluid"> 
-                <div id="appUserConfig"> 
-                    <button @click='exibir' style="color:white;" class="btn btn-sucess btn2-color space" type="button">
-                        <i class="fa fa-floppy-o fa-sm text-white-50"></i> Salvar
-                    </button>           
-                    <div class="card shadow space">
-                        <div class="card-header py-3">
-                            <p class="text-primary m-0 font-weight-bold">Configurações do usuário</p>
-                        </div>
-                        <div class="card-body">
-                            <form>
-                                <div class="form-row">
-                                    <div class="col-md-5">
-                                        <div class="form-group">
-                                            <label for="first_name"><strong>Nome</strong></label>
-                                            <input v-model="nomeUser" class="form-control" type="text">
-                                        </div><!--nome-->
-                                    </div>
-                                    <div class="col-md-5">
-                                        <div class="form-group">
-                                            <label for="last_name"><strong>Sobrenome</strong></label>
-                                            <input class="form-control" type="text">
-                                        </div><!--sobrenome-->
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <label for="last_name"><strong>CPF</strong></label>
-                                            <input class="form-control" type="text">
-                                        </div><!--CPF-->
-                                    </div>
-                                </div><!--form-row-->
-                                <div class="form-row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="email"><strong>Endereço de Email</strong></label>
-                                            <input class="form-control" type="email" placeholder="user@example.com" name="email">
+                    </div>
+                </nav>
+                <div class="container-fluid"> 
+                    <div id="appUserConfig"> 
+                        <button @click='exibir' style="color:white;" class="btn btn-sucess btn2-color space" type="button">
+                            <i class="fa fa-floppy-o fa-sm text-white-50"></i> Salvar
+                        </button>           
+                        <div class="card shadow space"> <!-- Configurações do usuário -->
+                            <div class="card-header py-3">
+                                <p class="text-primary m-0 font-weight-bold">Configurações do usuário</p>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label for="first_name"><strong>Nome</strong></label>
+                                                <input v-model="nomeUser" class="form-control" type="text">
+                                            </div><!--nome-->
                                         </div>
-                                    </div><!--email-->
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="email"><strong>Senha</strong></label>
-                                            <input class="form-control" type="email" placeholder="Defina uma nova senha" name="email">
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label for="last_name"><strong>Sobrenome</strong></label>
+                                                <input class="form-control" type="text">
+                                            </div><!--sobrenome-->
                                         </div>
-                                    </div><!--senha-->
-                                </div><!--form-row-->
-                            </form><!--form-->
-                        </div><!--card-body-->
-                    </div><!--card-shadow-->
-                    <div class="card shadow">
-                        <div class="card-header py-3">
-                            <p class="text-primary m-0 font-weight-bold">Configurações de contato</p>
-                        </div>
-                        <div class="card-body">
-                            <form>
-                                <div class="form-row">
-                                    <div class="col-md-5">
-                                        <div class="form-group">
-                                            <label for="address"><strong>Endereço</strong></label>
-                                            <input class="form-control" type="text">
-                                        </div><!--endereço-->
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label for="address"><strong>Número</strong></label>
-                                            <input class="form-control" type="text">
-                                        </div><!--número-->
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label for="address"><strong>Complemento</strong></label>
-                                            <input class="form-control" type="text">
-                                        </div><!--complemento-->
-                                    </div>
-                                </div><!--form-row-->
-                                <div class="form-row">
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label for="city"><strong>País</strong></label>
-                                            <input class="form-control" type="text">
-                                        </div><!--País-->
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label for="city"><strong>UF</strong></label>
-                                            <input class="form-control" type="text">
-                                        </div><!--UF-->
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label for="city"><strong>Cidade</strong></label>
-                                            <input class="form-control" type="text">
-                                        </div><!--Cidade-->
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <label for="city"><strong>CEP</strong></label>
-                                            <input class="form-control" type="text">
-                                        </div><!--CEP-->
-                                    </div>
-                                </div><!--form-row-->
-                            </form><!--form-->
-                        </div><!--card-body-->
-                    </div><!--card-shadow-->
-                </div><!--appUserConfig-->  
-            </div><!--container-fluid-->
-        </div>
-        <footer class="bg-white sticky-footer">
-            <div class="container my-auto">
-                <div class="text-center my-auto copyright"><span>Copyright © O2 Pagamentos 2020</span></div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label for="last_name"><strong>CPF</strong></label>
+                                                <input class="form-control" type="text">
+                                            </div><!--CPF-->
+                                        </div>
+                                    </div><!--form-row-->
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="email"><strong>Endereço de Email</strong></label>
+                                                <input class="form-control" type="email" placeholder="user@example.com" name="email">
+                                            </div>
+                                        </div><!--email-->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="email"><strong>Senha</strong></label>
+                                                <input class="form-control" type="email" placeholder="Defina uma nova senha" name="email">
+                                            </div>
+                                        </div><!--senha-->
+                                    </div><!--form-row-->
+                                </form><!--form-->
+                            </div><!--card-body-->
+                        </div><!--card-shadow--> <!-- Configurações do usuário -->
+                        <div class="card shadow space"> <!--Configurações de contato-->
+                            <div class="card-header py-3">
+                                <p class="text-primary m-0 font-weight-bold">Configurações de contato</p>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label for="address"><strong>Endereço</strong></label>
+                                                <input class="form-control" type="text">
+                                            </div><!--endereço-->
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="address"><strong>Número</strong></label>
+                                                <input class="form-control" type="text">
+                                            </div><!--número-->
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="address"><strong>Complemento</strong></label>
+                                                <input class="form-control" type="text">
+                                            </div><!--complemento-->
+                                        </div>
+                                    </div><!--form-row-->
+                                    <div class="form-row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="city"><strong>País</strong></label>
+                                                <input class="form-control" type="text">
+                                            </div><!--País-->
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="city"><strong>UF</strong></label>
+                                                <input class="form-control" type="text">
+                                            </div><!--UF-->
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="city"><strong>Cidade</strong></label>
+                                                <input class="form-control" type="text">
+                                            </div><!--Cidade-->
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label for="city"><strong>CEP</strong></label>
+                                                <input class="form-control" type="text">
+                                            </div><!--CEP-->
+                                        </div>
+                                    </div><!--form-row-->
+                                </form><!--form-->
+                            </div><!--card-body-->
+                        </div><!--card-shadow--> <!--Configurações de contato-->
+                        <div class="card shadow space"><!--Weeb hook-->
+                            <div class="card-header py-3">
+                                <p class="text-primary m-0 font-weight-bold">Weeb hook</p>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label for="address"><strong>URL</strong></label>
+                                                <input class="form-control" type="url">
+                                            </div><!--endereço-->
+                                        </div>
+                                    </div><!--form-row-->
+                                </form><!--form-->
+                            </div><!--card-body-->
+                        </div><!--card-shadow--> <!--Weeb hook-->
+                    </div><!--appUserConfig-->  
+                </div><!--container-fluid-->
             </div>
-        </footer>
-    </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © O2 Pagamentos 2020</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/chart.min.js"></script>
