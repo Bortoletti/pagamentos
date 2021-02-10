@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css"><!--fontes faltando-->
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script><!--vue-->
+    
 </head>
 <body id="page-top">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script><!--vue-->
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary navbar-color p-0">
             <div class="container-fluid d-flex flex-column p-0">
@@ -150,126 +151,10 @@
                     </div>
                 </nav>
                 <div class="container-fluid"> 
-                    <div id="appUserConfig"> 
-                        <button @click='exibir' style="color:white;" class="btn btn-sucess btn2-color space" type="button">
-                            <i class="fa fa-floppy-o fa-sm text-white-50"></i> Salvar
-                        </button>           
-                        <div class="card shadow space"> <!-- Configurações do usuário -->
-                            <div class="card-header py-3">
-                                <p class="text-primary m-0 font-weight-bold">Configurações do usuário</p>
-                            </div>
-                            <div class="card-body">
-                                <form>
-                                    <div class="form-row">
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label for="first_name"><strong>Nome</strong></label>
-                                                <input v-model="nomeUser" class="form-control" type="text">
-                                            </div><!--nome-->
-                                        </div>
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label for="last_name"><strong>Sobrenome</strong></label>
-                                                <input class="form-control" type="text">
-                                            </div><!--sobrenome-->
-                                        </div>
-                                        <div class="col-md-2">
-                                            <div class="form-group">
-                                                <label for="last_name"><strong>CPF</strong></label>
-                                                <input class="form-control" type="text">
-                                            </div><!--CPF-->
-                                        </div>
-                                    </div><!--form-row-->
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="email"><strong>Endereço de Email</strong></label>
-                                                <input class="form-control" type="email" placeholder="user@example.com" name="email">
-                                            </div>
-                                        </div><!--email-->
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="email"><strong>Senha</strong></label>
-                                                <input class="form-control" type="email" placeholder="Defina uma nova senha" name="email">
-                                            </div>
-                                        </div><!--senha-->
-                                    </div><!--form-row-->
-                                </form><!--form-->
-                            </div><!--card-body-->
-                        </div><!--card-shadow--> <!-- Configurações do usuário -->
-                        <div class="card shadow space"> <!--Configurações de contato-->
-                            <div class="card-header py-3">
-                                <p class="text-primary m-0 font-weight-bold">Configurações de contato</p>
-                            </div>
-                            <div class="card-body">
-                                <form>
-                                    <div class="form-row">
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label for="address"><strong>Endereço</strong></label>
-                                                <input class="form-control" type="text">
-                                            </div><!--endereço-->
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label for="address"><strong>Número</strong></label>
-                                                <input class="form-control" type="text">
-                                            </div><!--número-->
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label for="address"><strong>Complemento</strong></label>
-                                                <input class="form-control" type="text">
-                                            </div><!--complemento-->
-                                        </div>
-                                    </div><!--form-row-->
-                                    <div class="form-row">
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label for="city"><strong>País</strong></label>
-                                                <input class="form-control" type="text">
-                                            </div><!--País-->
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label for="city"><strong>UF</strong></label>
-                                                <input class="form-control" type="text">
-                                            </div><!--UF-->
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label for="city"><strong>Cidade</strong></label>
-                                                <input class="form-control" type="text">
-                                            </div><!--Cidade-->
-                                        </div>
-                                        <div class="col-md-2">
-                                            <div class="form-group">
-                                                <label for="city"><strong>CEP</strong></label>
-                                                <input class="form-control" type="text">
-                                            </div><!--CEP-->
-                                        </div>
-                                    </div><!--form-row-->
-                                </form><!--form-->
-                            </div><!--card-body-->
-                        </div><!--card-shadow--> <!--Configurações de contato-->
-                        <div class="card shadow space"><!--Weeb hook-->
-                            <div class="card-header py-3">
-                                <p class="text-primary m-0 font-weight-bold">Weeb hook</p>
-                            </div>
-                            <div class="card-body">
-                                <form>
-                                    <div class="form-row">
-                                        <div class="col-md-10">
-                                            <div class="form-group">
-                                                <label for="address"><strong>URL</strong></label>
-                                                <input class="form-control" type="url">
-                                            </div><!--endereço-->
-                                        </div>
-                                    </div><!--form-row-->
-                                </form><!--form-->
-                            </div><!--card-body-->
-                        </div><!--card-shadow--> <!--Weeb hook-->
-                    </div><!--appUserConfig-->  
+                    <div id="appUserConfig">
+                
+                        
+                    </div>
                 </div><!--container-fluid-->
             </div>
             <footer class="bg-white sticky-footer">
@@ -286,24 +171,82 @@
     <script src="assets/js/theme.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script><!--axios-->
     <script>
-        var userName = new Vue({
-          el: '#userName'
-          , data:{
-            nome : ''
-          }
-          , mounted(){
-            this.nome = sessionStorage.nomeUsuario
-          }
-        })
+       
         var appUserConfig = new Vue({
             el: '#appUserConfig',
-            data: {
-                itens:[],
-                nomeUser: ''
-            }, 
+            template: `
+                <div class='container-fluid'>
+                    <button v-on:click="update" style="color:white;" class="btn btn-sucess btn2-color space" type="button">
+                        <i class="fa fa-floppy-o fa-sm text-white-50"></i> Salvar
+                    </button>           
+                    <div class="card shadow space"> <!-- Configurações do usuário -->
+                        <div class="card-header py-3">
+                            <p class="text-primary m-0 font-weight-bold">Configurações do usuário</p>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label for="first_name"><strong>Nome</strong></label>
+                                            <input v-model="user.name" class="form-control" type="text">
+                                        </div><!--nome-->
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label for="last_name"><strong>E-mail</strong></label>
+                                            <input v-model="user.email" class="form-control" type="email">
+                                        </div><!--sobrenome-->
+                                    </div>
+                                </div><!--form-row-->
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="address"><strong>Web Hook URL</strong></label>
+                                            <input v-model="user.hook" class="form-control" type="url">
+                                        </div><!--endereço-->
+                                    </div>
+                                </div><!--form-row-->
+                            </form><!--form-->
+                        </div><!--card-body-->
+                    </div> <!--card-shadow Configurações do usuário -->
+                </div>
+            `,
+            data(){
+                return {
+                    "user": {
+                        "id": '',
+                        "name": '',
+                        "email": '',
+                        "hook": ''
+                    },
+                    "get": {}
+                }
+                
+            },
+            created(){
+                url = "https://www.deltasystems.com.br/o2/json/usuarioGet.php?id=" + sessionStorage.idUsuario 
+                axios.get(url)
+                .then((response)=>{
+
+                    this.get = response.data
+
+                    this.user.id = sessionStorage.idUsuario
+                    this.user.name = this.get.user.name
+                    this.user.email = this.get.user.email
+                    this.user.hook = this.get.user.hook
+                
+                })
+            },
             methods: {
-                exibir() {
-                    alert( this.nomeUser )
+                persist(name){
+                    sessionStorage.nomeUsuario = name
+                },
+                update(){
+                    axios.post('https://www.deltasystems.com.br/o2/json/usuarioPost.php', this.user)
+                    .then((response)=>{
+                        this.persist(this.user.name)
+                    })
                 }
             }
         })
